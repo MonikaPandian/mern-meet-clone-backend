@@ -53,7 +53,7 @@ const forgotPassword = async (req, res) => {
         }
         //User exist and now create a one time link valid for 15 minutes
         const token = jwt.sign(payload, secret, { expiresIn: '15m' });
-        const link = `https://mern-meet-clone-7ri3.vercel.app/reset-password/${user._id}/${token}`;
+        const link = `https://mern-meet-clone-5458aa.netlify.app/reset-password/${user._id}/${token}`;
         var transporter = nodeMailer.createTransport({
             service: 'gmail',
             auth: {
